@@ -30,10 +30,14 @@ export default class Todo extends Component {
       <ListItem>
         <ListItemContent style={(this.state.checked) ? {color : 'red', textDecoration : 'line-through'} : {}}>{this.state.nombre}</ListItemContent>
         <ListItemAction>
-          <Checkbox defaultChecked={this.state.checked} onChange={this.onChange} onClick={this.props.onClick.bind(null, {
-            id : this.props.id,
-            checked : this.state.checked
-          })} />
+          <Checkbox
+            defaultChecked={this.state.checked}
+            onChange={this.onChange}
+            onClick={this.props.onClick.bind(null, {
+              id : this.props.id,
+              checked : this.state.checked
+            })}
+          />
         </ListItemAction>
       </ListItem>
     )
